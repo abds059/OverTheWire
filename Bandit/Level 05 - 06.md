@@ -34,7 +34,7 @@ First we can gather the relevant flags needed to form the final command. So we c
 
 - For the human readable part we discovered a flag `-type f`:
 
-    ![human readable](../Images/Bandit/Level%205%20-%206/regualr%20file.png)
+    ![human readable](../Images/Bandit/Level%205%20-%206/regular%20file.png)
 
 - For specifying the 1033 bytes size we found a flag `-size n`:
 
@@ -47,6 +47,8 @@ First we can gather the relevant flags needed to form the final command. So we c
 So the final command becomes:
 
 `find -type f -size 1033c ! -executable`
+
+(where c specifies the size unit as bytes)
 
 ![find command](../Images/Bandit/Level%205%20-%206/find%20command.png)
 
